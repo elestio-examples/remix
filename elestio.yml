@@ -6,6 +6,8 @@ config:
   buildDir: "/build"
   runCommand: "npm run start"
   installCommand: "npm install"
+  icon: "public/favicon.ico"
+  screenshot: "public/images/remix.png"
 ports:
   - protocol: "HTTPS"
     targetProtocol: "HTTP"
@@ -22,3 +24,6 @@ exposedPorts:
     hostPort: "3000"
     containerPort: "3000"
     interface: "172.17.0.1"
+webUI:
+  - url: "https://[CI_CD_DOMAIN]"
+    label: "Website"    
